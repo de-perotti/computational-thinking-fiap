@@ -48,7 +48,7 @@ def ex3() -> None:
     utilize uma estrutura de decisão por seleção para escrever o nome do mês
     por extenso na tela.
     """
-    current_month = get_int_input("Em qual mês estamos (1-12)?")
+    current_month = input("Em qual mês estamos (1-12)?\n> ")
     current_month_str = {
         "1": "Janeiro",
         "2": "Fevereiro",
@@ -125,10 +125,10 @@ def ex6() -> None:
 
 
 if __name__ == "__main__":
-    exs: List[Callable[[], None]] = [ex1, ex2, ex3, ex4, ex5, ex6()]
+    exs: List[Callable[[], None]] = [ex1, ex2, ex3, ex4, ex5, ex6]
 
     print("Lista 6")
-    for idx, ex in exs:
+    for idx, ex in enumerate(exs):
         print(f"Exercício {idx + 1}")
         ex()
         print("\n")
